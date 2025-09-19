@@ -103,35 +103,46 @@
 </head>
 
 <body class="font-inter bg-gray-50">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 navbar-enhanced">
+    <!-- HEADER -->
+        <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <a href="index.html" class="logo-container">
-                            <img src="Logo.jpg" alt="Campus Connect Logo" class="logo-img">
-                        </a>
-                    </div>
+            <div class="flex items-center justify-between h-16">
+            
+            <!-- Logo + Tagline -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-13 h-12 rounded-full overflow-hidden">
+                <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
                 </div>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="nav-link-enhanced active">Home</a>
-                        <a href="About.html" class="nav-link-enhanced">About</a>
-                        <a href="program.html" class="nav-link-enhanced">Program</a>
-                        <a href="Amassadors.html" class="nav-link-enhanced">Ambassadors</a>
-                        <a href="Events.html" class="nav-link-enhanced">Events</a>
-                        <a href="Workshops.html" class="nav-link-enhanced">Workshops</a>
-                        <a href="Contact.html" class="nav-link-enhanced">Contact</a>
-                    </div>
+                <div class="font-semibold text-lg brand-name">Campus Connect</div>
+                <div class="text-xs text-gray-500">Connecting students, creating impact</div>
                 </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary-600 focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-3 text-xs font-medium">
+                <a href="index.html" class="nav-link-enhanced active">Home</a>
+                <a href="About.html" class="nav-link-enhanced">About</a>
+                <a href="program.html" class="nav-link-enhanced">Program</a>
+                <a href="Amassadors.html" class="nav-link-enhanced">Ambassadors</a>
+                <a href="Events.html" class="nav-link-enhanced">Events</a>
+                <a href="Contact.html" class="nav-link-enhanced">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="flex items-center gap-3">
+                <button id="menuBtn" aria-label="Open menu" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                </button>
+            </div>
+            
             </div>
         </div>
+        </header>
+
         <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
@@ -696,5 +707,715 @@
         }
     </script>
 </body>
+
+</html>
+
+                <div class="card-enhanced">
+
+                    <div class="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl p-4 mb-4">
+
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Global Networking Mixer</h3>
+
+                    <p class="text-gray-600 mb-4">April 5, 2025</p>
+
+                    <p class="text-gray-600 mb-6">Connect with students and professionals from around the world in this
+
+                        virtual networking event.</p>
+
+                    <button class="btn-enhanced w-full py-3">
+
+                        Register Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Application Process -->
+
+    <section class="section-enhanced py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+
+                <h2 class="heading-enhanced text-4xl font-bold text-gray-900 mb-4">Application Process</h2>
+
+                <p class="text-xl text-gray-600">Simple steps to join our community</p>
+
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+
+                <div class="text-center">
+
+                    <div
+
+                        class="bg-gradient-to-br from-primary-500 to-primary-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+
+                        <span class="text-white text-xl font-bold">1</span>
+
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Register</h3>
+
+                    <p class="text-gray-600">Create your account and complete the initial application form.</p>
+
+                </div>
+
+                <div class="text-center">
+
+                    <div
+
+                        class="bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+
+                        <span class="text-white text-xl font-bold">2</span>
+
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Interview</h3>
+
+                    <p class="text-gray-600">Participate in a virtual interview with our selection committee.</p>
+
+                </div>
+
+                <div class="text-center">
+
+                    <div
+
+                        class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+
+                        <span class="text-white text-xl font-bold">3</span>
+
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Selection</h3>
+
+                    <p class="text-gray-600">Our team reviews applications and selects the most promising candidates.
+
+                    </p>
+
+                </div>
+
+                <div class="text-center">
+
+                    <div
+
+                        class="bg-gradient-to-br from-green-500 to-green-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+
+                        <span class="text-white text-xl font-bold">4</span>
+
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Join</h3>
+
+                    <p class="text-gray-600">Welcome to Campus Connect! Start your leadership journey.</p>
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12">
+
+                <button class="btn-enhanced px-8 py-4 text-lg">
+
+                    Apply Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Testimonials -->
+
+    <section class="section-enhanced py-20 bg-gray-50">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+
+                <h2 class="heading-enhanced text-4xl font-bold text-gray-900 mb-4">What Our Ambassadors Say</h2>
+
+                <p class="text-xl text-gray-600">Hear from students who've transformed their lives</p>
+
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="card-enhanced">
+
+                    <div class="flex items-center mb-4">
+
+                        <div
+
+                            class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mr-4">
+
+                            <span class="text-white font-bold">S</span>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold text-gray-900">Sarah Chen</h4>
+
+                            <p class="text-sm text-gray-600">Yale University</p>
+
+                        </div>
+
+                    </div>
+
+                    <p class="text-gray-600 italic">"Campus Connect opened doors I never knew existed. The networking
+
+                        opportunities and leadership development have been incredible."</p>
+
+                </div>
+
+                <div class="card-enhanced">
+
+                    <div class="flex items-center mb-4">
+
+                        <div
+
+                            class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mr-4">
+
+                            <span class="text-white font-bold">M</span>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold text-gray-900">Michael Rodriguez</h4>
+
+                            <p class="text-sm text-gray-600">Berkeley University</p>
+
+                        </div>
+
+                    </div>
+
+                    <p class="text-gray-600 italic">"The workshops and mentorship program helped me develop skills that
+
+                        I use every day in my career and personal life."</p>
+
+                </div>
+
+                <div class="card-enhanced">
+
+                    <div class="flex items-center mb-4">
+
+                        <div
+
+                            class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mr-4">
+
+                            <span class="text-white font-bold">E</span>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold text-gray-900">Emily Davis</h4>
+
+                            <p class="text-sm text-gray-600">Princeton University</p>
+
+                        </div>
+
+                    </div>
+
+                    <p class="text-gray-600 italic">"Being part of this community has been life-changing. I've met
+
+                        amazing people and gained confidence in my abilities."</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Contact Section -->
+
+    <section class="section-enhanced py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid md:grid-cols-2 gap-12">
+
+                <div>
+
+                    <h2 class="heading-enhanced text-4xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+
+                    <p class="text-xl text-gray-600 mb-8">Ready to start your leadership journey? We'd love to hear from
+
+                        you!</p>
+
+                    <div class="space-y-6">
+
+                        <div class="flex items-center">
+
+                            <div class="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full p-3 mr-4">
+
+                                <i class="fas fa-envelope text-white"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-semibold text-gray-900">Email</h3>
+
+                                <p class="text-gray-600">contact@campusconnect.org</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center">
+
+                            <div class="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full p-3 mr-4">
+
+                                <i class="fas fa-map-marker-alt text-white"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-semibold text-gray-900">Office</h3>
+
+                                <p class="text-gray-600">123 University Ave, Education District, NY 10001</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mt-8">
+
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+
+                        <div class="flex space-x-4">
+
+                            <a href="#"
+
+                                class="bg-gradient-to-br from-green-500 to-green-600 text-white p-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+
+                                <i class="fab fa-whatsapp"></i>
+
+                            </a>
+
+                            <a href="#"
+
+                                class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+
+                                <i class="fab fa-linkedin"></i>
+
+                            </a>
+
+                            <a href="#"
+
+                                class="bg-gradient-to-br from-pink-500 to-purple-600 text-white p-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+
+                                <i class="fab fa-instagram"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <form class="form-enhanced space-y-6">
+
+                        <div>
+
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+
+                            <input type="text"
+
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+
+                                placeholder="Your full name">
+
+                        </div>
+
+                        <div>
+
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+
+                            <input type="email"
+
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+
+                                placeholder="your.email@example.com">
+
+                        </div>
+
+                        <div>
+
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+
+                            <textarea rows="4"
+
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+
+                                placeholder="Tell us about your goals and aspirations..."></textarea>
+
+                        </div>
+
+                        <button type="submit" class="btn-enhanced w-full py-4 text-lg">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer-enhanced bg-gray-900 text-white py-16">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid md:grid-cols-4 gap-8">
+
+                <div class="col-span-2">
+
+                    <h3
+
+                        class="text-2xl font-bold mb-4 bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+
+                        Campus Connect</h3>
+
+                    <p class="text-gray-400 mb-6">Empowering the next generation of student leaders through mentorship,
+
+                        networking, and hands-on experiences.</p>
+
+                    <div class="flex space-x-4">
+
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+
+                            <i class="fab fa-facebook"></i>
+
+                        </a>
+
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+
+                            <i class="fab fa-twitter"></i>
+
+                        </a>
+
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+
+                            <i class="fab fa-linkedin"></i>
+
+                        </a>
+
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+
+                    <ul class="space-y-2">
+
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+
+                        <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+
+                        <li><a href="program.html" class="text-gray-400 hover:text-white transition-colors">Program</a>
+
+                        </li>
+
+                        <li><a href="Events.html" class="text-gray-400 hover:text-white transition-colors">Events</a>
+
+                        </li>
+
+                        <li><a href="Contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div>
+
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+
+                    <ul class="space-y-2">
+
+                        <li><a href="privacy-policy.html"
+
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of
+
+                                Service</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+
+                <p class="text-gray-400">&copy; 2025 Campus Connect. All rights reserved.</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Campus Connect AI Assistant Chatbot Button -->
+
+    <button class="chatbot-button" onclick="toggleChatbot()">
+
+        <div class="chatbot-icon"></div>
+
+        <span class="chatbot-text">Ask CampusConnect AI Assistant</span>
+
+    </button>
+
+
+
+    <!-- Chat Window -->
+
+    <div class="chat-overlay" id="chatOverlay" onclick="closeChatbot()"></div>
+
+    <div class="chat-window" id="chatWindow">
+
+        <div class="chat-header">
+
+            <div class="chat-title">Campus Connect AI Assistant</div>
+
+            <button class="chat-close" onclick="closeChatbot()">×</button>
+
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+
+            <div class="chat-message assistant">
+
+                👋 Hello! I'm the Campus Connect AI Assistant. I can help you with information about our programs,
+
+                events, and opportunities. What would you like to know?
+
+            </div>
+
+        </div>
+
+        <div class="chat-input-container">
+
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your question here..."
+
+                onkeypress="handleKeyPress(event)">
+
+            <button class="chat-send" onclick="sendMessage()"></button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+
+        let chatOpen = false;
+
+
+
+        function toggleChatbot() {
+
+            if (chatOpen) {
+
+                closeChatbot();
+
+            } else {
+
+                openChatbot();
+
+            }
+
+        }
+
+
+
+        function openChatbot() {
+
+            document.getElementById('chatWindow').classList.add('open');
+
+            document.getElementById('chatOverlay').classList.add('open');
+
+            document.getElementById('chatInput').focus();
+
+            chatOpen = true;
+
+        }
+
+
+
+        function closeChatbot() {
+
+            document.getElementById('chatWindow').classList.remove('open');
+
+            document.getElementById('chatOverlay').classList.remove('open');
+
+            chatOpen = false;
+
+        }
+
+
+
+        function handleKeyPress(event) {
+
+            if (event.key === 'Enter') {
+
+                sendMessage();
+
+            }
+
+        }
+
+
+
+        function sendMessage() {
+
+            const input = document.getElementById('chatInput');
+
+            const message = input.value.trim();
+
+
+
+            if (message) {
+
+                // Add user message
+
+                addMessage(message, 'user');
+
+                input.value = '';
+
+
+
+                // Simulate AI response
+
+                setTimeout(() => {
+
+                    const response = getAIResponse(message);
+
+                    addMessage(response, 'assistant');
+
+                }, 1000);
+
+            }
+
+        }
+
+
+
+        function addMessage(text, sender) {
+
+            const messagesContainer = document.getElementById('chatMessages');
+
+            const messageDiv = document.createElement('div');
+
+            messageDiv.className = `chat-message ${sender}`;
+
+            messageDiv.textContent = text;
+
+            messagesContainer.appendChild(messageDiv);
+
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+        }
+
+
+
+        function getAIResponse(userMessage) {
+
+            const message = userMessage.toLowerCase();
+
+
+
+            if (message.includes('hello') || message.includes('hi')) {
+
+                return "Hello! Welcome to Campus Connect! How can I help you today?";
+
+            } else if (message.includes('program') || message.includes('programs')) {
+
+                return "Our programs include leadership development, networking opportunities, workshops, and exclusive internships. Would you like to know more about any specific program?";
+
+            } else if (message.includes('event') || message.includes('events')) {
+
+                return "We have amazing events coming up! Check out our Events page for Leadership Summit 2025, Tech Innovation Workshop, and Global Networking Mixer. Which event interests you?";
+
+            } else if (message.includes('apply') || message.includes('application')) {
+
+                return "To apply, simply click the 'Apply Now' button on any page or visit our Contact section. The process includes registration, interview, selection, and joining our community!";
+
+            } else if (message.includes('ambassador') || message.includes('ambassadors')) {
+
+                return "Our ambassadors are amazing student leaders from universities worldwide. They share their experiences and help new members. Would you like to become an ambassador?";
+
+            } else if (message.includes('contact') || message.includes('help')) {
+
+                return "You can contact us at contact@campusconnect.org or visit our Contact page. We're here to help you succeed!";
+
+            } else {
+
+                return "That's a great question! I'd be happy to help you with information about Campus Connect. You can explore our programs, events, or contact us directly. What specific information are you looking for?";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+
 
 </html>

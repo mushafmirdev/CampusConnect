@@ -96,15 +96,15 @@
 
 .nav-link-enhanced {
     position: relative;
-    color: #ffffff;
+    color: #9ca3af; /* grey */
     font-weight: 600;
-    padding: 12px 20px;
+    padding: 8px 12px;
     border-radius: 6px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     font-size: 15px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    text-transform: none; /* remove uppercase */
     overflow: hidden;
 }
 
@@ -115,27 +115,47 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    background: transparent;
     transition: left 0.3s ease;
     z-index: -1;
     border-radius: 6px;
 }
 
 .nav-link-enhanced:hover::before {
-    left: 0;
+    left: -100%;
 }
 
 .nav-link-enhanced:hover {
-    color: #ffffff;
+    color: #0c4a6e; /* dark blue */
     transform: translateY(-2px);
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 8px rgba(12, 74, 110, 0.8), 0 0 14px rgba(12, 74, 110, 0.6);
 }
 
 .nav-link-enhanced.active {
-    color: #ffffff;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
+    color: #0c4a6e; /* dark blue */
+    background: transparent;
+    box-shadow: none;
+    text-shadow: 0 0 8px rgba(12, 74, 110, 0.8), 0 0 14px rgba(12, 74, 110, 0.6);
+}
+
+/* Force override with higher specificity */
+header .nav-link-enhanced,
+nav .nav-link-enhanced {
+    color: #9ca3af !important; /* grey */
+}
+
+header .nav-link-enhanced:hover,
+nav .nav-link-enhanced:hover {
+    color: #0c4a6e !important; /* dark blue */
+    text-shadow: 0 0 8px rgba(12, 74, 110, 0.8), 0 0 14px rgba(12, 74, 110, 0.6) !important;
+}
+
+header .nav-link-enhanced.active,
+nav .nav-link-enhanced.active {
+    color: #0c4a6e !important; /* dark blue */
+    text-shadow: 0 0 8px rgba(12, 74, 110, 0.8), 0 0 14px rgba(12, 74, 110, 0.6) !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 /* Enhanced Button Styling */
@@ -1652,4 +1672,15 @@ a:focus {
         height: 350px;
         max-width: 300px;
     }
+}
+
+/* Brand name styling - dark blue with hover glow */
+.brand-name {
+    color: #0c4a6e !important; /* dark blue */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.brand-name:hover {
+    color: #0c4a6e !important; /* dark blue */
+    text-shadow: 0 0 8px rgba(12, 74, 110, 0.8), 0 0 14px rgba(12, 74, 110, 0.6) !important;
 }
