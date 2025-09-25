@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Campus Connect</title>
+    <link rel="icon" type="image/jpeg" href="Logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-50">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo + Tagline -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-13 h-12 rounded-full overflow-hidden">
+                        <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="font-semibold text-lg brand-name">Campus Connect</div>
+                        <div class="text-xs text-gray-500">Connecting students, creating impact</div>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center gap-3 text-xs font-medium">
+                    <a href="index.html" class="nav-link-enhanced">Home</a>
+                    <a href="About.html" class="nav-link-enhanced active">About</a>
+                    <a href="program.html" class="nav-link-enhanced">Program</a>
+                    <a href="Amassadors.html" class="nav-link-enhanced">Ambassadors</a>
+                    <a href="Events.html" class="nav-link-enhanced">Events</a>
+                    <a href="Contact.html" class="nav-link-enhanced">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-3">
+                    <button id="menuBtn" aria-label="Open menu" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Home</a>
+            <a href="About.html" class="block px-3 py-2 text-primary-600 font-semibold">About</a>
+            <a href="program.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Program</a>
+            <a href="Amassadors.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Ambassadors</a>
+            <a href="Events.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Events</a>
+            <a href="Contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Contact</a>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="pt-20 pb-16 bg-gradient-to-br from-primary-600 via-secondary-600 to-primary-800 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 animate-fade-in">
+                About <span class="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Campus
+                    Connect</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-100 animate-slide-up max-w-3xl mx-auto">
+                Empowering the next generation of student leaders through mentorship, networking, and hands-on
+                experiences.
+            </p>
+        </div>
+        
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Founded in 2020 by a group of passionate student leaders, Campus Connect began as a simple idea:
+                        what if we could create a global network where students could connect, learn, and grow together?
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Today, we've grown into a thriving community of over 10,000 students across 500+ universities
+                        worldwide.
+                        Our mission remains the same: to empower students with the tools, connections, and opportunities
+                        they need
+                        to become tomorrow's leaders.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-primary-100 text-primary-800 px-4 py-2 rounded-full text-sm font-semibold">
+                            <i class="fas fa-users mr-2"></i>10,000+ Students
+                        </div>
+                        <div class="bg-secondary-100 text-secondary-800 px-4 py-2 rounded-full text-sm font-semibold">
+                            <i class="fas fa-university mr-2"></i>500+ Universities
+                        </div>
+                        <div class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">
+                            <i class="fas fa-globe mr-2"></i>50+ Countries
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-slide-up">
+                    <div class="relative">
+                        <div
+                            class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl p-8 h-96 flex items-center justify-center overflow-hidden">
+                            <!-- Campus Connect Group Photo -->
+                            <div class="w-full h-full rounded-2xl overflow-hidden">
+                                <img src="1.png" alt="Campus Connect Team" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Vision & Mission</h2>
+                <p class="text-xl text-gray-600">Driving positive change through student leadership</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div
+                        class="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-4 w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        To create a global ecosystem where every student has the opportunity to develop leadership
+                        skills,
+                        build meaningful connections, and make a positive impact in their communities and beyond.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div
+                        class="bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-2xl p-4 w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        We provide students with comprehensive leadership development programs, mentorship
+                        opportunities,
+                        and a supportive community that fosters personal growth, professional development, and social
+                        impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
+                <p class="text-xl text-gray-600">The principles that guide everything we do</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div
+                        class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Collaboration</h3>
+                    <p class="text-gray-600">We believe in the power of working together to achieve common goals.</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-6 w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
+                    <p class="text-gray-600">We encourage creative thinking and embrace new ideas and approaches.</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Inclusion</h3>
+                    <p class="text-gray-600">We create an environment where everyone feels welcome and valued.</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Impact</h3>
+                    <p class="text-gray-600">We measure success by the positive change we create in the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
+                <p class="text-xl text-gray-600">Meet the passionate individuals driving our mission</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="mb-6">
+                        <div class="w-32 h-32 rounded-full mx-auto overflow-hidden shadow-lg">
+                            <img src="2.png" alt="Jennifer Smith" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Jennifer Smith</h3>
+                    <p class="text-primary-600 font-semibold mb-3 text-lg">Founder & CEO</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Former student leader with 10+ years in
+                        education and social
+                        impact. Passionate about empowering the next generation.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-linkedin text-lg"></i>
+                        </a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="mb-6">
+                        <div class="w-32 h-32 rounded-full mx-auto overflow-hidden shadow-lg">
+                            <img src="2.png" alt="Michael Rodriguez" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Michael Rodriguez</h3>
+                    <p class="text-primary-600 font-semibold mb-3 text-lg">Chief Technology Officer</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Tech entrepreneur passionate about using
+                        technology for social
+                        good. Building innovative solutions for student success.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-linkedin text-lg"></i>
+                        </a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="mb-6">
+                        <div class="w-32 h-32 rounded-full mx-auto overflow-hidden shadow-lg">
+                            <img src="2.png" alt="Amanda Chen" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Amanda Chen</h3>
+                    <p class="text-primary-600 font-semibold mb-3 text-lg">Head of Programs</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Education specialist focused on student
+                        development and mentorship.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-linkedin text-lg"></i>
+                        </a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="py-20 bg-gradient-to-br from-primary-600 via-secondary-600 to-primary-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Impact</h2>
+                <p class="text-xl text-gray-100">Numbers that tell our story</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-yellow-300">10,000+</div>
+                    <div class="text-gray-100 text-lg">Active Students</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-yellow-300">500+</div>
+                    <div class="text-gray-100 text-lg">Partner Universities</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-yellow-300">50+</div>
+                    <div class="text-gray-100 text-lg">Countries Represented</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-yellow-300">95%</div>
+                    <div class="text-gray-100 text-lg">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Ready to Join Our Community?</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Become part of a global network of student leaders making a difference in the world.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://docs.google.com/forms/d/1N0vkS7pntMIRdFDMC_gkQzai7879y5ne4k0zbgahCQo/" target="_blank"
+                    class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-block text-center">
+                    Apply Now
+                </a>
+                <button
+                    class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-600 hover:to-secondary-600 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                        </div>
+                        <h3
+                            class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                            Campus Connect</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering the next generation of student leaders through mentorship,
+                        networking, and hands-on experiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:contact@campusconnect.org"
+                            class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="program.html" class="text-gray-400 hover:text-white transition-colors">Program</a>
+                        </li>
+                        <li><a href="Events.html" class="text-gray-400 hover:text-white transition-colors">Events</a>
+                        </li>
+                        <li><a href="Contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Campus Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Campus Connect AI Assistant Chatbot Button -->
+    <button class="chatbot-button" onclick="toggleChatbot()">
+        <div class="chatbot-icon"></div>
+        <span class="chatbot-text">Ask CampusConnect AI Assistant</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chat-overlay" id="chatOverlay" onclick="closeChatbot()"></div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-title">Campus Connect AI Assistant</div>
+            <button class="chat-close" onclick="closeChatbot()">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message assistant">
+                👋 Hello! I'm the Campus Connect AI Assistant. I can help you with information about our programs,
+                events, and opportunities. What would you like to know?
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your question here..."
+                onkeypress="handleKeyPress(event)">
+            <button class="chat-send" onclick="sendMessage()"></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        let chatOpen = false;
+
+        function toggleChatbot() {
+            if (chatOpen) {
+                closeChatbot();
+            } else {
+                openChatbot();
+            }
+        }
+
+        function openChatbot() {
+            document.getElementById('chatWindow').classList.add('open');
+            document.getElementById('chatOverlay').classList.add('open');
+            document.getElementById('chatInput').focus();
+            chatOpen = true;
+        }
+
+        function closeChatbot() {
+            document.getElementById('chatWindow').classList.remove('open');
+            document.getElementById('chatOverlay').classList.remove('open');
+            chatOpen = false;
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+
+            if (message) {
+                addMessage(message, 'user');
+                input.value = '';
+
+                setTimeout(() => {
+                    const response = getAIResponse(message);
+                    addMessage(response, 'assistant');
+                }, 1000);
+            }
+        }
+
+        function addMessage(text, sender) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}`;
+            messageDiv.textContent = text;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function getAIResponse(userMessage) {
+            const message = userMessage.toLowerCase();
+
+            if (message.includes('hello') || message.includes('hi')) {
+                return "Hello! Welcome to Campus Connect! How can I help you today?";
+            } else if (message.includes('about') || message.includes('vision') || message.includes('mission')) {
+                return "Campus Connect's vision is to create a global network of empowered student leaders who drive positive change. Our mission is to provide students with tools, resources, and connections for leadership development.";
+            } else if (message.includes('program') || message.includes('programs')) {
+                return "Our programs include leadership development, networking opportunities, workshops, and exclusive internships. Would you like to know more about any specific program?";
+            } else if (message.includes('event') || message.includes('events')) {
+                return "We have amazing events coming up! Check out our Events page for Leadership Summit 2025, Tech Innovation Workshop, and Global Networking Mixer.";
+            } else if (message.includes('apply') || message.includes('application')) {
+                return "To apply, simply click the 'Apply Now' button on any page or visit our Contact section. The process includes registration, interview, selection, and joining our community!";
+            } else {
+                return "That's a great question! I'd be happy to help you with information about Campus Connect. What specific information are you looking for?";
+            }
+        }
+    </script>
+</body>
+
+</html>

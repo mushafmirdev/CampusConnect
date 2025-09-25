@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Campus Connect</title>
+    <link rel="icon" type="image/jpeg" href="Logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-50">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo + Tagline -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-13 h-12 rounded-full overflow-hidden">
+                        <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="font-semibold text-lg brand-name">Campus Connect</div>
+                        <div class="text-xs text-gray-500">Connecting students, creating impact</div>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center gap-3 text-xs font-medium">
+                    <a href="index.html" class="nav-link-enhanced">Home</a>
+                    <a href="About.html" class="nav-link-enhanced">About</a>
+                    <a href="program.html" class="nav-link-enhanced">Program</a>
+                    <a href="Amassadors.html" class="nav-link-enhanced">Ambassadors</a>
+                    <a href="Events.html" class="nav-link-enhanced active">Events</a>
+                    <a href="Contact.html" class="nav-link-enhanced">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-3">
+                    <button id="menuBtn" aria-label="Open menu" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Home</a>
+            <a href="About.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">About</a>
+            <a href="program.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Program</a>
+            <a href="Amassadors.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Ambassadors</a>
+            <a href="Events.html" class="block px-3 py-2 text-primary-600 font-semibold">Events</a>
+            <a href="Contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Contact</a>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Upcoming <span
+                    class="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Events</span>
+            </h1>
+            <p class="hero-subtitle">
+                Join our community events and connect with fellow student leaders from around the world.
+            </p>
+        </div>
+        
+    </section>
+
+    <!-- Event Filter -->
+    <section class="py-8 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button
+                    class="filter-btn active bg-primary-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300"
+                    data-filter="all">
+                    All Events
+                </button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-all duration-300"
+                    data-filter="workshop">
+                    Workshops
+                </button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-all duration-300"
+                    data-filter="summit">
+                    Summits
+                </button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-all duration-300"
+                    data-filter="networking">
+                    Networking
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1 -->
+                <div class="event-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                    data-category="summit">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-4 mb-4">
+                        <i class="fas fa-calendar-alt text-white text-2xl"></i>
+                    </div>
+                    <div class="mb-4">
+                        <span
+                            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Summit</span>
+                        <span
+                            class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold ml-2">Virtual</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Leadership Summit 2025</h3>
+                    <p class="text-gray-600 mb-4">March 15-17, 2025</p>
+                    <p class="text-gray-600 mb-6">Join us for an inspiring 3-day summit featuring world-renowned
+                        speakers and networking opportunities.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">500+ attendees</span>
+                        <button
+                            class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                            Register
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                    data-category="workshop">
+                    <div class="bg-gradient-to-br from-green-500 to-teal-600 rounded-xl p-4 mb-4">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <div class="mb-4">
+                        <span
+                            class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Workshop</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold ml-2">Live</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Tech Innovation Workshop</h3>
+                    <p class="text-gray-600 mb-4">February 28, 2025</p>
+                    <p class="text-gray-600 mb-6">Learn the latest in AI, blockchain, and emerging technologies from
+                        industry experts.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">100 attendees</span>
+                        <button
+                            class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                            Register
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                    data-category="networking">
+                    <div class="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl p-4 mb-4">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <div class="mb-4">
+                        <span
+                            class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">Networking</span>
+                        <span
+                            class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold ml-2">Hybrid</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Global Networking Mixer</h3>
+                    <p class="text-gray-600 mb-4">April 5, 2025</p>
+                    <p class="text-gray-600 mb-6">Connect with students and professionals from around the world in this
+                        virtual networking event.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">300+ attendees</span>
+                        <button
+                            class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                            Register
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                    data-category="workshop">
+                    <div class="bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl p-4 mb-4">
+                        <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+                    </div>
+                    <div class="mb-4">
+                        <span
+                            class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Workshop</span>
+                        <span
+                            class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold ml-2">Virtual</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Entrepreneurship Masterclass</h3>
+                    <p class="text-gray-600 mb-4">March 8, 2025</p>
+                    <p class="text-gray-600 mb-6">Learn from successful entrepreneurs about starting and scaling your
+                        own business.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">150 attendees</span>
+                        <button
+                            class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                            Register
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                    data-category="summit">
+                    <div class="bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl p-4 mb-4">
+                        <i class="fas fa-globe text-white text-2xl"></i>
+                    </div>
+                    <div class="mb-4">
+                        <span
+                            class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-semibold">Summit</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold ml-2">Live</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Global Impact Summit</h3>
+                    <p class="text-gray-600 mb-4">May 20-22, 2025</p>
+                    <p class="text-gray-600 mb-6">Explore how students can create positive change in their communities
+                        and beyond.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">750+ attendees</span>
+                        <button
+                            class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                            Register
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="event-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                    data-category="networking">
+                    <div class="bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl p-4 mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <div class="mb-4">
+                        <span
+                            class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold">Networking</span>
+                        <span
+                            class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold ml-2">Virtual</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Mentor-Mentee Meetup</h3>
+                    <p class="text-gray-600 mb-4">March 25, 2025</p>
+                    <p class="text-gray-600 mb-6">Connect with experienced professionals and fellow students for
+                        mentorship opportunities.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">200 attendees</span>
+                        <button
+                            class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                            Register
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Timeline -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Event Timeline</h2>
+                <p class="text-xl text-gray-600">Don't miss out on these upcoming opportunities</p>
+            </div>
+            <div class="relative">
+                <div
+                    class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 to-secondary-500">
+                </div>
+                <div class="space-y-12">
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-primary-500">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Leadership Summit 2025</h3>
+                                <p class="text-gray-600 mb-2">March 15-17, 2025</p>
+                                <p class="text-sm text-gray-500">Virtual Event</p>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center z-10">
+                            <i class="fas fa-calendar text-white text-sm"></i>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center z-10">
+                            <i class="fas fa-laptop-code text-white text-sm"></i>
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-secondary-500">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Tech Innovation Workshop</h3>
+                                <p class="text-gray-600 mb-2">February 28, 2025</p>
+                                <p class="text-sm text-gray-500">Live Workshop</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-orange-500">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Global Networking Mixer</h3>
+                                <p class="text-gray-600 mb-2">April 5, 2025</p>
+                                <p class="text-sm text-gray-500">Hybrid Event</p>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center z-10">
+                            <i class="fas fa-handshake text-white text-sm"></i>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-20 bg-gradient-to-br from-primary-600 via-secondary-600 to-primary-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Stay Updated</h2>
+            <p class="text-xl text-gray-100 mb-8">
+                Get notified about upcoming events and exclusive opportunities.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email"
+                    class="flex-1 px-4 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                <button
+                    class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-3 rounded-full font-semibold hover:from-yellow-500 hover:to-yellow-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                        </div>
+                        <h3
+                            class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                            Campus Connect</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering the next generation of student leaders through mentorship,
+                        networking, and hands-on experiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:contact@campusconnect.org"
+                            class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="program.html" class="text-gray-400 hover:text-white transition-colors">Program</a>
+                        </li>
+                        <li><a href="Events.html" class="text-gray-400 hover:text-white transition-colors">Events</a>
+                        </li>
+                        <li><a href="Contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Campus Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Event filtering functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const eventCards = document.querySelectorAll('.event-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-primary-600', 'text-white');
+                        b.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+
+                    // Add active class to clicked button
+                    btn.classList.add('active', 'bg-primary-600', 'text-white');
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+
+                    const filter = btn.dataset.filter;
+
+                    eventCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeIn 0.5s ease-in-out';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Campus Connect AI Assistant Chatbot Button -->
+    <button class="chatbot-button" onclick="toggleChatbot()">
+        <div class="chatbot-icon"></div>
+        <span class="chatbot-text">Ask CampusConnect AI Assistant</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chat-overlay" id="chatOverlay" onclick="closeChatbot()"></div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-title">Campus Connect AI Assistant</div>
+            <button class="chat-close" onclick="closeChatbot()">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message assistant">
+                👋 Hello! I'm the Campus Connect AI Assistant. I can help you with information about our programs,
+                events, and opportunities. What would you like to know?
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your question here..."
+                onkeypress="handleKeyPress(event)">
+            <button class="chat-send" onclick="sendMessage()"></button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+
+</html>

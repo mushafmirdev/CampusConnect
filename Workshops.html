@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops - Campus Connect</title>
+    <link rel="icon" type="image/jpeg" href="Logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-50">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo + Tagline -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-13 h-12 rounded-full overflow-hidden">
+                        <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="font-semibold text-lg brand-name">Campus Connect</div>
+                        <div class="text-xs text-gray-500">Connecting students, creating impact</div>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center gap-3 text-xs font-medium">
+                    <a href="index.html" class="nav-link-enhanced">Home</a>
+                    <a href="About.html" class="nav-link-enhanced">About</a>
+                    <a href="program.html" class="nav-link-enhanced">Program</a>
+                    <a href="Amassadors.html" class="nav-link-enhanced">Ambassadors</a>
+                    <a href="Events.html" class="nav-link-enhanced">Events</a>
+                    <a href="Workshops.html" class="nav-link-enhanced active">Workshops</a>
+                    <a href="Contact.html" class="nav-link-enhanced">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-3">
+                    <button id="menuBtn" aria-label="Open menu" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Home</a>
+            <a href="About.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">About</a>
+            <a href="program.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Program</a>
+            <a href="Amassadors.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Ambassadors</a>
+            <a href="Events.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Events</a>
+            <a href="Workshops.html" class="block px-3 py-2 text-primary-600 font-semibold">Workshops</a>
+            <a href="Contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Contact</a>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span
+                    class="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Workshops</span>
+            </h1>
+            <p class="hero-subtitle">
+                Hands-on learning experiences designed to develop your skills and expand your knowledge.
+            </p>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,96C960,107,1056,117,1152,112C1248,107,1344,85,1392,74.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
+                    fill="#f9fafb" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Workshop Categories -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Workshop Categories</h2>
+                <p class="text-xl text-gray-600">Choose from our diverse range of skill-building workshops</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-4 w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Technology & Innovation</h3>
+                    <p class="text-gray-600 mb-4">Learn cutting-edge technologies and innovation methodologies</p>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">12
+                        Workshops</span>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-4 w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Leadership & Management</h3>
+                    <p class="text-gray-600 mb-4">Develop essential leadership and management skills</p>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">8
+                        Workshops</span>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-4 w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Entrepreneurship</h3>
+                    <p class="text-gray-600 mb-4">Master the art of starting and scaling businesses</p>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">6
+                        Workshops</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Workshops -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Workshops</h2>
+                <p class="text-xl text-gray-600">Hands-on learning with industry experts</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-4 mb-4">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">AI & Machine Learning</h3>
+                    <p class="text-gray-600 mb-4">Learn the fundamentals of AI and ML with hands-on projects</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm text-gray-500">Duration: 3 hours</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Tech</span>
+                    </div>
+                    <button
+                        class="w-full bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                        Register Now
+                    </button>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-br from-green-500 to-teal-600 rounded-xl p-4 mb-4">
+                        <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Leadership Fundamentals</h3>
+                    <p class="text-gray-600 mb-4">Build core leadership skills through interactive exercises</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm text-gray-500">Duration: 4 hours</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Leadership</span>
+                    </div>
+                    <button
+                        class="w-full bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                        Register Now
+                    </button>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl p-4 mb-4">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Startup Bootcamp</h3>
+                    <p class="text-gray-600 mb-4">From idea to launch in an intensive weekend workshop</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm text-gray-500">Duration: 2 days</span>
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Business</span>
+                    </div>
+                    <button
+                        class="w-full bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                        Register Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                        </div>
+                        <h3
+                            class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                            Campus Connect</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering the next generation of student leaders through mentorship,
+                        networking, and hands-on experiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:contact@campusconnect.org"
+                            class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="program.html" class="text-gray-400 hover:text-white transition-colors">Program</a>
+                        </li>
+                        <li><a href="Events.html" class="text-gray-400 hover:text-white transition-colors">Events</a>
+                        </li>
+                        <li><a href="Contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Campus Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Campus Connect AI Assistant Chatbot Button -->
+    <button class="chatbot-button" onclick="toggleChatbot()">
+        <div class="chatbot-icon"></div>
+        <span class="chatbot-text">Ask CampusConnect AI Assistant</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chat-overlay" id="chatOverlay" onclick="closeChatbot()"></div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-title">Campus Connect AI Assistant</div>
+            <button class="chat-close" onclick="closeChatbot()">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message assistant">
+                👋 Hello! I'm the Campus Connect AI Assistant. I can help you with information about our programs,
+                events, and opportunities. What would you like to know?
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your question here..."
+                onkeypress="handleKeyPress(event)">
+            <button class="chat-send" onclick="sendMessage()"></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>

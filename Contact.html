@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Campus Connect</title>
+    <link rel="icon" type="image/jpeg" href="Logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-50">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo + Tagline -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-13 h-12 rounded-full overflow-hidden">
+                        <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="font-semibold text-lg brand-name">Campus Connect</div>
+                        <div class="text-xs text-gray-500">Connecting students, creating impact</div>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center gap-3 text-xs font-medium">
+                    <a href="index.html" class="nav-link-enhanced">Home</a>
+                    <a href="About.html" class="nav-link-enhanced">About</a>
+                    <a href="program.html" class="nav-link-enhanced">Program</a>
+                    <a href="Amassadors.html" class="nav-link-enhanced">Ambassadors</a>
+                    <a href="Events.html" class="nav-link-enhanced">Events</a>
+                    <a href="Contact.html" class="nav-link-enhanced active">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-3">
+                    <button id="menuBtn" aria-label="Open menu" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Home</a>
+            <a href="About.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">About</a>
+            <a href="program.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Program</a>
+            <a href="Amassadors.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Ambassadors</a>
+            <a href="Events.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Events</a>
+            <a href="Contact.html" class="block px-3 py-2 text-primary-600 font-semibold">Contact</a>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span
+                    class="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Contact</span>
+                Us
+            </h1>
+            <p class="hero-subtitle">
+                Ready to start your leadership journey? We'd love to hear from you!
+            </p>
+        </div>
+        
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+                    <p class="text-xl text-gray-600 mb-8">Have questions about our programs or want to learn more? We're
+                        here to help!</p>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center">
+                            <div class="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full p-3 mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Email</h3>
+                                <p class="text-gray-600">contact@campusconnect.org</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full p-3 mr-4">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Phone</h3>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full p-3 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Office</h3>
+                                <p class="text-gray-600">123 University Ave, Education District, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full p-3 mr-4">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Hours</h3>
+                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="bg-gradient-to-br from-green-500 to-green-600 text-white p-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-gradient-to-br from-pink-500 to-purple-600 text-white p-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-gradient-to-br from-blue-400 to-blue-500 text-white p-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                            <input type="text" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                                placeholder="Your full name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                                placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                                placeholder="+1 (555) 123-4567">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">University</label>
+                            <input type="text"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                                placeholder="Your university name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <select
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300">
+                                <option>General Inquiry</option>
+                                <option>Program Information</option>
+                                <option>Application Support</option>
+                                <option>Partnership Opportunities</option>
+                                <option>Technical Support</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea rows="5" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                                placeholder="Tell us about your goals and how we can help..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Quick answers to common questions</p>
+            </div>
+            <div class="space-y-6">
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg border border-blue-200">
+                    <h3 class="text-lg font-semibold text-blue-900 mb-2">How do I apply to Campus Connect?</h3>
+                    <p class="text-blue-700">You can apply through our online application form. The process includes
+                        submitting your application, participating in a virtual interview, and completing our selection
+                        process.</p>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 shadow-lg border border-green-200">
+                    <h3 class="text-lg font-semibold text-green-900 mb-2">What are the eligibility requirements?</h3>
+                    <p class="text-green-700">We welcome students from all universities worldwide who are passionate
+                        about leadership and making a positive impact. There are no specific GPA or major requirements.
+                    </p>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 shadow-lg border border-purple-200">
+                    <h3 class="text-lg font-semibold text-purple-900 mb-2">Is there a cost to join?</h3>
+                    <p class="text-purple-700">Campus Connect is completely free for students. We believe that
+                        leadership
+                        development should be accessible to everyone, regardless of financial background.</p>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 shadow-lg border border-orange-200">
+                    <h3 class="text-lg font-semibold text-orange-900 mb-2">How long is the program?</h3>
+                    <p class="text-orange-700">Our comprehensive program runs for 12 months, with different phases
+                        focusing on foundation building, skill development, practical application, and mastery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                        </div>
+                        <h3
+                            class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                            Campus Connect</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering the next generation of student leaders through mentorship,
+                        networking, and hands-on experiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:contact@campusconnect.org"
+                            class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="program.html" class="text-gray-400 hover:text-white transition-colors">Program</a>
+                        </li>
+                        <li><a href="Events.html" class="text-gray-400 hover:text-white transition-colors">Events</a>
+                        </li>
+                        <li><a href="Contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Campus Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Campus Connect AI Assistant Chatbot Button -->
+    <button class="chatbot-button" onclick="toggleChatbot()">
+        <div class="chatbot-icon"></div>
+        <span class="chatbot-text">Ask CampusConnect AI Assistant</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chat-overlay" id="chatOverlay" onclick="closeChatbot()"></div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-title">Campus Connect AI Assistant</div>
+            <button class="chat-close" onclick="closeChatbot()">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message assistant">
+                👋 Hello! I'm the Campus Connect AI Assistant. I can help you with information about our programs,
+                events, and opportunities. What would you like to know?
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your question here..."
+                onkeypress="handleKeyPress(event)">
+            <button class="chat-send" onclick="sendMessage()"></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>

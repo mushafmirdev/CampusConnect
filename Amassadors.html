@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambassadors - Campus Connect</title>
+    <link rel="icon" type="image/jpeg" href="Logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-50">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo + Tagline -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-13 h-12 rounded-full overflow-hidden">
+                        <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="font-semibold text-lg brand-name">Campus Connect</div>
+                        <div class="text-xs text-gray-500">Connecting students, creating impact</div>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center gap-3 text-xs font-medium">
+                    <a href="index.html" class="nav-link-enhanced">Home</a>
+                    <a href="About.html" class="nav-link-enhanced">About</a>
+                    <a href="program.html" class="nav-link-enhanced">Program</a>
+                    <a href="Amassadors.html" class="nav-link-enhanced active">Ambassadors</a>
+                    <a href="Events.html" class="nav-link-enhanced">Events</a>
+                    <a href="Contact.html" class="nav-link-enhanced">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-3">
+                    <button id="menuBtn" aria-label="Open menu" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Home</a>
+            <a href="About.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">About</a>
+            <a href="program.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Program</a>
+            <a href="Amassadors.html" class="block px-3 py-2 text-primary-600 font-semibold">Ambassadors</a>
+            <a href="Events.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Events</a>
+            <a href="Contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Contact</a>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Our <span
+                    class="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Ambassadors</span>
+            </h1>
+            <p class="hero-subtitle">
+                Meet the inspiring student leaders representing Campus Connect at universities worldwide.
+            </p>
+        </div>
+        
+    </section>
+
+    <!-- Ambassador Spotlight -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Ambassador Spotlight</h2>
+                <p class="text-xl text-gray-600">Featured leaders making a difference</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                    <div class="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
+                        <img src="2.png" alt="Alex Smith" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Alex Smith</h3>
+                    <p class="text-primary-600 font-medium mb-2">Harvard University</p>
+                    <p class="text-gray-600 mb-4">Computer Science Major, passionate about AI and social impact</p>
+                    <div class="flex justify-center space-x-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tech</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Innovation</span>
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-primary-600 hover:text-primary-700"><i
+                                class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700"><i
+                                class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700"><i
+                                class="fab fa-github text-xl"></i></a>
+                    </div>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                    <div class="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
+                        <img src="2.png" alt="Maria Johnson" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Maria Johnson</h3>
+                    <p class="text-primary-600 font-medium mb-2">Stanford University</p>
+                    <p class="text-gray-600 mb-4">Business Administration, focused on sustainable entrepreneurship</p>
+                    <div class="flex justify-center space-x-2 mb-4">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Business</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Sustainability</span>
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-primary-600 hover:text-primary-700"><i
+                                class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700"><i
+                                class="fab fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                    <div class="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
+                        <img src="2.png" alt="David Wilson" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">David Wilson</h3>
+                    <p class="text-primary-600 font-medium mb-2">MIT</p>
+                    <p class="text-gray-600 mb-4">Engineering, developing innovative solutions for climate change</p>
+                    <div class="flex justify-center space-x-2 mb-4">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Engineering</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Climate</span>
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-primary-600 hover:text-primary-700"><i
+                                class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700"><i
+                                class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700"><i
+                                class="fab fa-github text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Ambassadors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Meet Our Ambassadors</h2>
+                <p class="text-xl text-gray-600">Inspiring leaders from universities worldwide</p>
+            </div>
+
+            <!-- Filter Options -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button
+                    class="filter-btn active bg-primary-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300"
+                    data-filter="all">
+                    All
+                </button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-all duration-300"
+                    data-filter="north-america">
+                    North America
+                </button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-all duration-300"
+                    data-filter="europe">
+                    Europe
+                </button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-all duration-300"
+                    data-filter="asia">
+                    Asia
+                </button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-all duration-300"
+                    data-filter="other">
+                    Other Regions
+                </button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Ambassador 1 -->
+                <div class="ambassador-card bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                    data-region="north-america">
+                    <div class="relative mb-4">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden shadow-lg">
+                            <img src="2.png" alt="Alex Smith" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -top-1 -right-1 bg-green-500 rounded-full p-1">
+                            <i class="fas fa-star text-white text-xs"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Alex Smith</h3>
+                    <p class="text-sm text-primary-600 font-semibold mb-2 text-center">Harvard University</p>
+                    <p class="text-xs text-gray-500 text-center mb-4">Computer Science Major, passionate about AI and
+                        social impact</p>
+                    <div class="flex justify-center space-x-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">AI</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">Social
+                            Impact</span>
+                    </div>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-linkedin text-sm"></i>
+                        </a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Ambassador 2 -->
+                <div class="ambassador-card bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                    data-region="north-america">
+                    <div class="relative mb-4">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden shadow-lg">
+                            <img src="2.png" alt="Maria Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -top-1 -right-1 bg-green-500 rounded-full p-1">
+                            <i class="fas fa-star text-white text-xs"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Maria Johnson</h3>
+                    <p class="text-sm text-primary-600 font-semibold mb-2 text-center">Stanford University</p>
+                    <p class="text-xs text-gray-500 text-center mb-4">Business Administration, focused on sustainable
+                        entrepreneurship</p>
+                    <div class="flex justify-center space-x-2 mb-4">
+                        <span
+                            class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">Sustainability</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Entrepreneurship</span>
+                    </div>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-linkedin text-sm"></i>
+                        </a>
+                        <a href="#" class="text-primary-600 hover:text-primary-700 transition-colors">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ambassador 3 -->
+                <div class="ambassador-card bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    data-region="europe">
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="2.png" alt="David Wilson" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1 text-center">David Wilson</h3>
+                    <p class="text-sm text-primary-600 font-medium mb-2 text-center">MIT</p>
+                    <p class="text-xs text-gray-500 text-center mb-3">Engineering, developing innovative solutions for
+                        climate change</p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Engineering</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Climate</span>
+                    </div>
+                </div>
+
+                <!-- Ambassador 4 -->
+                <div class="ambassador-card bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    data-region="asia">
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="2.png" alt="Amanda Chen" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1 text-center">Amanda Chen</h3>
+                    <p class="text-sm text-primary-600 font-medium mb-2 text-center">Head of Programs</p>
+                    <p class="text-xs text-gray-500 text-center mb-3">Education specialist focused on student
+                        development and mentorship</p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">Education</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Mentorship</span>
+                    </div>
+                </div>
+
+                <!-- Ambassador 5 -->
+                <div class="ambassador-card bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    data-region="europe">
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="2.png" alt="Lisa Schmidt" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1 text-center">Lisa Schmidt</h3>
+                    <p class="text-sm text-primary-600 font-medium mb-2 text-center">ETH Zurich</p>
+                    <p class="text-xs text-gray-500 text-center mb-3">Environmental Science</p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded-full text-xs">Environment</span>
+                    </div>
+                </div>
+
+                <!-- Ambassador 6 -->
+                <div class="ambassador-card bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    data-region="north-america">
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="2.png" alt="Aisha Brown" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1 text-center">Aisha Brown</h3>
+                    <p class="text-sm text-primary-600 font-medium mb-2 text-center">McGill University</p>
+                    <p class="text-xs text-gray-500 text-center mb-3">Political Science</p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs">Politics</span>
+                    </div>
+                </div>
+
+                <!-- Ambassador 7 -->
+                <div class="ambassador-card bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    data-region="asia">
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="2.png" alt="Raj Patel" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1 text-center">Raj Patel</h3>
+                    <p class="text-sm text-primary-600 font-medium mb-2 text-center">IIT Delhi</p>
+                    <p class="text-xs text-gray-500 text-center mb-3">Computer Science</p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">Tech</span>
+                    </div>
+                </div>
+
+                <!-- Ambassador 8 -->
+                <div class="ambassador-card bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    data-region="other">
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="2.png" alt="Nadia Garcia" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1 text-center">Nadia Garcia</h3>
+                    <p class="text-sm text-primary-600 font-medium mb-2 text-center">University of Melbourne</p>
+                    <p class="text-xs text-gray-500 text-center mb-3">Psychology</p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Psychology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambassador Benefits -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Ambassador Benefits</h2>
+                <p class="text-xl text-gray-600">What you gain as a Campus Connect Ambassador</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-network-wired text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Global Network</h3>
+                    <p class="text-gray-600">Connect with ambassadors and students from universities worldwide.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-6 w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Leadership Training</h3>
+                    <p class="text-gray-600">Access exclusive workshops and training sessions.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-briefcase text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Career Opportunities</h3>
+                    <p class="text-gray-600">Get access to exclusive internships and job opportunities.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Recognition</h3>
+                    <p class="text-gray-600">Receive official recognition and certificates for your contributions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become an Ambassador -->
+    <section class="py-20 bg-gradient-to-br from-primary-600 via-secondary-600 to-primary-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Become an Ambassador</h2>
+            <p class="text-xl text-gray-100 mb-8">
+                Join our global network of student leaders and make a difference in your community.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-500 hover:to-yellow-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Apply Now
+                </button>
+                <button
+                    class="bg-gradient-to-r from-primary-400 to-secondary-400 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-500 hover:to-secondary-500 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="Logo.jpg" alt="Campus Connect Logo" class="w-full h-full object-cover">
+                        </div>
+                        <h3
+                            class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                            Campus Connect</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering the next generation of student leaders through mentorship,
+                        networking, and hands-on experiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:contact@campusconnect.org"
+                            class="bg-gray-800 p-3 rounded-full hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="program.html" class="text-gray-400 hover:text-white transition-colors">Program</a>
+                        </li>
+                        <li><a href="Events.html" class="text-gray-400 hover:text-white transition-colors">Events</a>
+                        </li>
+                        <li><a href="Contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Campus Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Ambassador filtering functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const ambassadorCards = document.querySelectorAll('.ambassador-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-primary-600', 'text-white');
+                        b.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+
+                    // Add active class to clicked button
+                    btn.classList.add('active', 'bg-primary-600', 'text-white');
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+
+                    const filter = btn.dataset.filter;
+
+                    ambassadorCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.region === filter) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeIn 0.5s ease-in-out';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Campus Connect AI Assistant Chatbot Button -->
+    <button class="chatbot-button" onclick="toggleChatbot()">
+        <div class="chatbot-icon"></div>
+        <span class="chatbot-text">Ask CampusConnect AI Assistant</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chat-overlay" id="chatOverlay" onclick="closeChatbot()"></div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-title">Campus Connect AI Assistant</div>
+            <button class="chat-close" onclick="closeChatbot()">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message assistant">
+                👋 Hello! I'm the Campus Connect AI Assistant. I can help you with information about our programs,
+                events, and opportunities. What would you like to know?
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your question here..."
+                onkeypress="handleKeyPress(event)">
+            <button class="chat-send" onclick="sendMessage()"></button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+
+</html>
